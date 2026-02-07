@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title %}Features | {{ config.title }}{% endblock %}
+{% block description %}Discover what makes Cyanea the platform of choice for modern research teams.{% endblock %}
+
+{% block content %}
+<div class="features-page">
+    <header class="features-page-header">
+        <h1>Everything you need for genomics</h1>
+        <p>From raw sequencing data to publication-ready results, Cyanea handles the entire workflow with speed and precision.</p>
+    </header>
+
+    <div class="features-page-grid">
+        <div class="features-page-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+            </div>
+            <h3>High-Performance Processing</h3>
+            <p>Rust-powered analysis pipelines process genomic data at unprecedented speeds. Whether you're working with whole genome sequences or targeted panels, Cyanea handles your data efficiently.</p>
+            <ul>
+                <li>Parallel processing across cores</li>
+                <li>Memory-mapped I/O for large files</li>
+                <li>Streaming compression (zstd, gzip)</li>
+            </ul>
+        </div>
+
+        <div class="features-page-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+            </div>
+            <h3>Collaborative Workspaces</h3>
+            <p>Create organizations, manage team access, and share datasets seamlessly. Collaborate across departments, institutions, and continents.</p>
+            <ul>
+                <li>Organization-level access control</li>
+                <li>Real-time activity feeds</li>
+                <li>Shared pipeline configurations</li>
+            </ul>
+        </div>
+
+        <div class="features-page-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                </svg>
+            </div>
+            <h3>Version Control for Data</h3>
+            <p>Track changes to your datasets and analyses with built-in version control. Never lose work and always know who changed what and when.</p>
+            <ul>
+                <li>Full audit trail</li>
+                <li>Branch and merge datasets</li>
+                <li>Point-in-time recovery</li>
+            </ul>
+        </div>
+
+        <div class="features-page-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+            </div>
+            <h3>Enterprise Security</h3>
+            <p>Your data security is our priority. Enterprise-grade protection keeps your research safe at every layer.</p>
+            <ul>
+                <li>End-to-end encryption</li>
+                <li>SOC 2 Type II compliance</li>
+                <li>HIPAA-ready infrastructure</li>
+                <li>Role-based access controls</li>
+            </ul>
+        </div>
+
+        <div class="features-page-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"/>
+                    <polyline points="8 6 2 12 8 18"/>
+                </svg>
+            </div>
+            <h3>API &amp; Integrations</h3>
+            <p>Connect Cyanea with your existing tools and workflows through our comprehensive API.</p>
+            <ul>
+                <li>RESTful API for custom integrations</li>
+                <li>Webhook support for automation</li>
+                <li>Export to FASTA, VCF, BAM</li>
+                <li>CLI for scripted workflows</li>
+            </ul>
+        </div>
+
+        <div class="features-page-card">
+            <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+            </div>
+            <h3>Interactive Dashboard</h3>
+            <p>Monitor pipelines, explore results, and manage your datasets from a single, intuitive interface.</p>
+            <ul>
+                <li>Real-time pipeline monitoring</li>
+                <li>Interactive data visualizations</li>
+                <li>Customizable workspace views</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="cta">
+        <div class="cta-bg"></div>
+        <div class="cta-container">
+            <h2>See it in action</h2>
+            <p>Start your free trial today and experience the difference.</p>
+            <a href="/signup" class="btn btn-primary btn-large">Get Started Free</a>
+        </div>
+    </section>
+</div>
+{% endblock %}

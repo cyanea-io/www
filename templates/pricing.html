@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}Pricing | {{ config.title }}{% endblock %}
+{% block description %}Simple, transparent pricing for teams of all sizes.{% endblock %}
+
+{% block content %}
+<div class="pricing-page">
+    <header class="pricing-header">
+        <h1>Simple, transparent pricing</h1>
+        <p>Start free, scale as you grow. No hidden fees, no surprises.</p>
+    </header>
+
+    <div class="pricing-grid">
+        <!-- Free -->
+        <div class="pricing-card">
+            <div class="pricing-tier">Free</div>
+            <div class="pricing-price">
+                <span class="amount">$0</span>
+                <span class="period">/month</span>
+            </div>
+            <p class="pricing-description">Perfect for individual researchers and small projects.</p>
+            <ul class="pricing-features">
+                <li>Up to 10 GB storage</li>
+                <li>3 team members</li>
+                <li>Community support</li>
+                <li>Basic analytics</li>
+                <li>Standard pipelines</li>
+            </ul>
+            <div class="pricing-cta">
+                <a href="/signup" class="btn btn-secondary">Get Started</a>
+            </div>
+        </div>
+
+        <!-- Pro -->
+        <div class="pricing-card featured">
+            <div class="pricing-tier">Pro</div>
+            <div class="pricing-price">
+                <span class="amount">$49</span>
+                <span class="period">/user/month</span>
+            </div>
+            <p class="pricing-description">For growing research teams that need more power.</p>
+            <ul class="pricing-features">
+                <li>100 GB storage per user</li>
+                <li>Unlimited team members</li>
+                <li>Priority support</li>
+                <li>Advanced analytics</li>
+                <li>Full API access</li>
+                <li>Custom integrations</li>
+                <li>Custom pipelines</li>
+            </ul>
+            <div class="pricing-cta">
+                <a href="/signup" class="btn btn-primary">Start Free Trial</a>
+            </div>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card">
+            <div class="pricing-tier">Enterprise</div>
+            <div class="pricing-price">
+                <span class="amount">Custom</span>
+            </div>
+            <p class="pricing-description">For organizations with advanced requirements.</p>
+            <ul class="pricing-features">
+                <li>Unlimited storage</li>
+                <li>Dedicated infrastructure</li>
+                <li>24/7 support with SLA</li>
+                <li>HIPAA compliance</li>
+                <li>On-premises deployment</li>
+                <li>Dedicated account manager</li>
+                <li>Custom training</li>
+            </ul>
+            <div class="pricing-cta">
+                <a href="/contact" class="btn btn-secondary">Contact Sales</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta">
+        <div class="cta-bg"></div>
+        <div class="cta-container">
+            <h2>Not sure which plan is right?</h2>
+            <p>Our team can help you find the best fit for your research needs.</p>
+            <a href="/contact" class="btn btn-secondary btn-large">Talk to Sales</a>
+        </div>
+    </section>
+</div>
+{% endblock %}

@@ -1,7 +1,7 @@
 # Cyanea Marketing Website
 # https://www.getzola.org/documentation/getting-started/configuration/
 
-base_url = "https://cyanea.io"
+base_url = "https://cyanea.bio"
 title = "Cyanea"
 description = "Modern bioinformatics platform for genomic data management and analysis"
 default_language = "en"
@@ -23,8 +23,8 @@ feed = true
 smart_punctuation = true
 
 [markdown.highlighting]
-enabled = true
-theme = "css"
+theme = "github-light"
+style = "class"
 
 [search]
 include_title = true
