@@ -1,40 +1,34 @@
 // Cyanea — Premium Light Theme
 // ==============================
 
-// Palette
+@import "tokens";
+
+// Aliases — map generated token names to existing variable names
 $white: #FFFFFF;
-$off-white: #F8FAFC;
-$gray-50: #F1F5F9;
-$gray-100: #E2E8F0;
-$gray-200: #CBD5E1;
-$gray-400: #94A3B8;
-$gray-500: #64748B;
-$gray-600: #475569;
-$gray-800: #1E293B;
-$gray-900: #0F172A;
-$dark: #0B1120;
+$off-white: $color-gray-50;
+$gray-50: $color-gray-100;
+$gray-100: $color-gray-200;
+$gray-200: $color-gray-300;
+$gray-400: $color-gray-400;
+$gray-500: $color-gray-500;
+$gray-600: $color-gray-600;
+$gray-800: $color-gray-800;
+$gray-900: $color-gray-900;
+$dark: $color-dark;
 
-$accent: #0EA5E9;
-$accent-dark: #0284C7;
-$accent-deeper: #0369A1;
-$indigo: #6366F1;
-$violet: #8B5CF6;
-$green: #22C55E;
+$accent: $color-primary;
+$accent-dark: $color-primary-700;
+$accent-deeper: $color-primary-800;
+$indigo: $color-accent;
+$violet: $color-violet;
+$green: $color-success;
 
-$shadow-color: rgba(14, 165, 233, 0.12);
-$shadow-sm: 0 0 0 1px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.04);
-$shadow-md: 0 0 0 1px rgba(0,0,0,0.03), 0 4px 16px rgba(0,0,0,0.06);
-$shadow-lg: 0 0 0 1px rgba(0,0,0,0.03), 0 16px 40px -8px rgba(0,0,0,0.1);
-$shadow-accent: 0 0 0 1px rgba(14,165,233,0.08), 0 16px 40px -8px $shadow-color;
+$shadow-color: rgba(6, 182, 212, 0.12);
 
-$font-display: 'Epilogue', sans-serif;
-$font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-$font-mono: 'JetBrains Mono', 'SF Mono', Monaco, Consolas, monospace;
-
-$max-w: 1200px;
-$max-w-narrow: 800px;
-$radius: 16px;
-$radius-sm: 10px;
+$max-w: $spacing-container;
+$max-w-narrow: $spacing-narrow;
+$radius: $radius-lg;
+$radius-sm: $radius-md;
 $radius-pill: 100px;
 
 // Reset
@@ -1195,4 +1189,215 @@ p { margin: 0; color: $gray-600; }
     .hero-title { font-size: 2.25rem; }
     .hero-actions, .cta-actions { flex-direction: column; align-items: center; .btn { width: 100%; justify-content: center; } }
     .footer-links { grid-template-columns: 1fr; }
+}
+
+// ─── Dark Mode ───────────────────────────────────────
+@media (prefers-color-scheme: dark) {
+    body {
+        background: $color-gray-950;
+        color: $color-gray-200;
+    }
+
+    a {
+        color: $color-primary-400;
+        &:hover { color: $color-primary-300; }
+    }
+
+    h1, h2, h3, h4, h5, h6 { color: $white; }
+    p { color: $color-gray-400; }
+
+    .site-header {
+        background: rgba($color-dark, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom-color: rgba(255,255,255,0.06);
+    }
+
+    .logo { color: $white; &:hover { color: $white; } }
+
+    .nav-links a {
+        color: $color-gray-400;
+        &:hover { color: $white; }
+    }
+
+    .mobile-menu-toggle span { background: $color-gray-200; }
+
+    .hero {
+        background: $color-dark;
+    }
+
+    .hero-mesh {
+        background:
+            radial-gradient(ellipse 70% 50% at 50% 0%, rgba(6,182,212,0.15) 0%, transparent 70%),
+            radial-gradient(ellipse 50% 40% at 80% 30%, rgba(99,102,241,0.1) 0%, transparent 60%),
+            radial-gradient(ellipse 40% 50% at 15% 60%, rgba(139,92,246,0.08) 0%, transparent 50%);
+    }
+
+    .hero-badge {
+        background: $color-gray-800;
+        color: $color-gray-300;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+    }
+
+    .hero-title { color: $white; }
+    .hero-subtitle { color: $color-gray-400; }
+
+    .terminal {
+        box-shadow: 0 32px 64px -16px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.06);
+    }
+
+    .trust-section {
+        border-bottom-color: rgba(255,255,255,0.06);
+    }
+
+    .features-section {
+        background: $color-gray-900;
+    }
+
+    .section-eyebrow { color: $color-primary-400; }
+
+    .bento-card {
+        background: $color-gray-800;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+
+        &:hover {
+            box-shadow: 0 0 0 1px rgba(6,182,212,0.15), 0 16px 40px -8px rgba(6,182,212,0.1);
+        }
+
+        p { color: $color-gray-400; }
+    }
+
+    .bento-icon {
+        background: linear-gradient(135deg, rgba(6,182,212,0.15), rgba(99,102,241,0.1));
+        color: $color-primary-400;
+    }
+
+    .workflow-section {
+        background: $color-gray-900;
+    }
+
+    .step p { color: $color-gray-400; }
+    .step-num {
+        color: $color-primary-400;
+        background: rgba(6,182,212,0.12);
+        border-color: rgba(6,182,212,0.2);
+    }
+
+    .btn-primary {
+        box-shadow: 0 2px 12px rgba(6,182,212,0.3);
+        &:hover { box-shadow: 0 6px 24px rgba(6,182,212,0.35); }
+    }
+
+    .btn-outline {
+        background: $color-gray-800;
+        color: $color-gray-200;
+        box-shadow: inset 0 0 0 1.5px $color-gray-700;
+        &:hover {
+            box-shadow: inset 0 0 0 1.5px $color-gray-400;
+            color: $white;
+        }
+    }
+
+    .btn-ghost {
+        color: $color-gray-400;
+        &:hover { color: $white; background: $color-gray-800; }
+    }
+
+    .btn-secondary {
+        background: $color-gray-800;
+        color: $color-gray-200;
+        box-shadow: inset 0 0 0 1.5px $color-gray-700;
+        &:hover {
+            box-shadow: inset 0 0 0 1.5px $color-gray-400;
+            color: $white;
+        }
+    }
+
+    // Features page
+    .features-page-card {
+        background: $color-gray-800;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+        &:hover { box-shadow: 0 0 0 1px rgba(6,182,212,0.15), 0 16px 40px -8px rgba(6,182,212,0.1); }
+        p { color: $color-gray-400; }
+        ul li { color: $color-gray-400; &::before { color: $color-primary-400; } }
+    }
+
+    // Pricing page
+    .pricing-card {
+        background: $color-gray-800;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+        &:hover { box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 20px 48px -12px rgba(0,0,0,0.3); }
+
+        &.featured {
+            box-shadow: 0 0 0 1px rgba(6,182,212,0.2);
+            &:hover { box-shadow: 0 0 0 1px rgba(6,182,212,0.3), 0 20px 48px -12px rgba(6,182,212,0.15); }
+        }
+    }
+
+    .pricing-tier { color: $white; }
+    .pricing-price .amount { color: $white; }
+    .pricing-description { border-bottom-color: rgba(255,255,255,0.06); }
+    .pricing-features li { color: $color-gray-400; &::before { color: $color-primary-400; } }
+
+    // Blog
+    .blog-card {
+        background: $color-gray-800;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+        &:hover { box-shadow: 0 0 0 1px rgba(6,182,212,0.15), 0 16px 40px -8px rgba(6,182,212,0.1); }
+    }
+
+    .blog-card-content h2 a {
+        color: $white;
+        &:hover { color: $color-primary-400; }
+    }
+
+    .tag {
+        background: $color-gray-800;
+        color: $color-gray-400;
+        &:hover { background: rgba(6,182,212,0.1); color: $color-primary-400; }
+    }
+
+    // Blog post
+    .blog-post-content {
+        p, ul, ol { color: $color-gray-300; }
+        li { color: $color-gray-300; }
+        strong { color: $white; }
+        code { background: $color-gray-800; color: $color-primary-400; }
+        blockquote { background: $color-gray-800; border-left-color: $color-primary-400; }
+        hr { border-top-color: rgba(255,255,255,0.06); }
+    }
+
+    // Generic pages
+    .page-content, .section-content {
+        p, ul, ol { color: $color-gray-300; }
+        li { color: $color-gray-300; }
+        strong { color: $white; }
+        code { background: $color-gray-800; color: $color-primary-400; }
+        blockquote { background: $color-gray-800; border-left-color: $color-primary-400; }
+        hr { border-top-color: rgba(255,255,255,0.06); }
+    }
+
+    .page-card {
+        background: $color-gray-800;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+        &:hover { box-shadow: 0 0 0 1px rgba(255,255,255,0.1); }
+        h2 a { color: $white; &:hover { color: $color-primary-400; } }
+        p { color: $color-gray-400; }
+    }
+
+    .post-nav-link {
+        background: $color-gray-800;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+        &:hover { box-shadow: 0 0 0 1px rgba(255,255,255,0.1); }
+    }
+    .post-nav-title { color: $white; }
+
+    .taxonomy-term {
+        background: $color-gray-800;
+        color: $color-gray-200;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.06);
+        &:hover { color: $color-primary-400; }
+    }
+
+    .pagination-info { color: $color-gray-500; }
 }
