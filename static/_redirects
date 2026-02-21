@@ -1,0 +1,2 @@
+# Redirect www to apex
+https://www.cyanea.bio/* https://cyanea.bio/:splat 301

@@ -1,5 +1,5 @@
 [tools]
-zola = "0.19"
+zola = "0.22"
 
 [env]
 ZOLA_ENV = "development"
