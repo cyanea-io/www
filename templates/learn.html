@@ -1,0 +1,402 @@
+{% extends "base.html" %}
+
+{% block title %}Learn | {{ config.title }}{% endblock %}
+{% block description %}Interactive bioinformatics simulations powered by WebAssembly. Explore life science concepts through hands-on, browser-based learning.{% endblock %}
+
+{% block content %}
+<div class="hub-page">
+    <header class="hub-header">
+        <h1>Interactive Simulations</h1>
+        <p>Explore life science concepts through hands-on, browser-based simulations. Each one is powered by Cyanea's Rust crates compiled to WebAssembly — no installation needed, just curiosity.</p>
+    </header>
+
+    <div class="hub-stats">
+        <div class="hub-stat">
+            <div class="hub-stat-value">10</div>
+            <div class="hub-stat-label">Simulations</div>
+        </div>
+        <div class="hub-stat">
+            <div class="hub-stat-value">6</div>
+            <div class="hub-stat-label">Domains</div>
+        </div>
+        <div class="hub-stat">
+            <div class="hub-stat-value">11</div>
+            <div class="hub-stat-label">Crates Used</div>
+        </div>
+    </div>
+
+    <div class="learn-paths">
+        <div class="learn-path">
+            <span class="labs-layer-label">Sequences</span>
+            <div class="learn-path-dots">
+                <span class="learn-path-dot level-beginner" title="DNA Transcription"></span>
+                <span class="learn-path-dot level-beginner" title="K-mer Frequency Explorer"></span>
+                <span class="learn-path-dot level-intermediate" title="Pairwise Sequence Alignment"></span>
+            </div>
+        </div>
+        <div class="learn-path">
+            <span class="labs-layer-label">Evolution</span>
+            <div class="learn-path-dots">
+                <span class="learn-path-dot level-intermediate" title="Phylogenetic Tree Builder"></span>
+            </div>
+        </div>
+        <div class="learn-path">
+            <span class="labs-layer-label">Structure</span>
+            <div class="learn-path-dots">
+                <span class="learn-path-dot level-beginner" title="Protein Structure Viewer"></span>
+                <span class="learn-path-dot level-intermediate" title="Small Molecule Explorer"></span>
+            </div>
+        </div>
+        <div class="learn-path">
+            <span class="labs-layer-label">Analysis</span>
+            <div class="learn-path-dots">
+                <span class="learn-path-dot level-beginner" title="p-value Playground"></span>
+                <span class="learn-path-dot level-intermediate" title="Clustering & Dimensionality Reduction"></span>
+            </div>
+        </div>
+        <div class="learn-path">
+            <span class="labs-layer-label">Data</span>
+            <div class="learn-path-dots">
+                <span class="learn-path-dot level-beginner" title="FASTA/FASTQ Format Inspector"></span>
+                <span class="learn-path-dot level-advanced" title="GPU Parallel Patterns"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="learn-legend">
+        <span class="learn-legend-item"><span class="learn-path-dot level-beginner"></span> Beginner</span>
+        <span class="learn-legend-item"><span class="learn-path-dot level-intermediate"></span> Intermediate</span>
+        <span class="learn-legend-item"><span class="learn-path-dot level-advanced"></span> Advanced</span>
+    </div>
+
+    <div class="hub-filters">
+        <span class="hub-filter-pill active">All</span>
+        <span class="hub-filter-pill">Molecular Biology</span>
+        <span class="hub-filter-pill">Sequence Analysis</span>
+        <span class="hub-filter-pill">Phylogenetics</span>
+        <span class="hub-filter-pill">Structural Biology</span>
+        <span class="hub-filter-pill">Statistics</span>
+        <span class="hub-filter-pill">Machine Learning</span>
+    </div>
+
+    <div class="hub-layout">
+        <aside class="hub-sidebar">
+            <div class="hub-sidebar-section">
+                <h4>Difficulty</h4>
+                <ul>
+                    <li class="hub-sidebar-item">Beginner <span class="count">5</span></li>
+                    <li class="hub-sidebar-item">Intermediate <span class="count">4</span></li>
+                    <li class="hub-sidebar-item">Advanced <span class="count">1</span></li>
+                </ul>
+            </div>
+            <div class="hub-sidebar-section">
+                <h4>Duration</h4>
+                <ul>
+                    <li class="hub-sidebar-item">5–10 min <span class="count">4</span></li>
+                    <li class="hub-sidebar-item">15–20 min <span class="count">4</span></li>
+                    <li class="hub-sidebar-item">30+ min <span class="count">2</span></li>
+                </ul>
+            </div>
+            <div class="hub-sidebar-section">
+                <h4>Powered By</h4>
+                <ul>
+                    <li class="hub-sidebar-item">cyanea-seq <span class="count">2</span></li>
+                    <li class="hub-sidebar-item">cyanea-align <span class="count">1</span></li>
+                    <li class="hub-sidebar-item">cyanea-phylo <span class="count">1</span></li>
+                    <li class="hub-sidebar-item">cyanea-struct <span class="count">1</span></li>
+                    <li class="hub-sidebar-item">cyanea-chem <span class="count">1</span></li>
+                    <li class="hub-sidebar-item">cyanea-stats <span class="count">1</span></li>
+                    <li class="hub-sidebar-item">cyanea-ml <span class="count">1</span></li>
+                    <li class="hub-sidebar-item">cyanea-io <span class="count">1</span></li>
+                    <li class="hub-sidebar-item">cyanea-gpu <span class="count">1</span></li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="hub-main">
+            <div class="hub-sort-bar">
+                <span class="hub-sort-label">10 simulations</span>
+                <div class="hub-sort-options">
+                    <span class="active">Recommended</span>
+                    <span>Beginner first</span>
+                    <span>Recently added</span>
+                </div>
+            </div>
+
+            <div class="learn-grid">
+                <!-- 1. DNA Transcription -->
+                <div class="learn-card">
+                    <div class="learn-card-preview">
+                        <span>DNA → mRNA → Protein</span>
+                    </div>
+                    <div class="learn-card-body">
+                        <div class="learn-card-header">
+                            <h3>DNA Transcription</h3>
+                            <span class="learn-difficulty level-beginner">Beginner</span>
+                        </div>
+                        <p class="learn-card-description">Watch a DNA sequence get transcribed into mRNA and translated into a protein chain. Adjust codons and see how mutations change the output in real time.</p>
+                        <div class="learn-card-crates">
+                            <span class="labs-crate-pill">cyanea-seq</span>
+                        </div>
+                        <div class="hub-card-tags">
+                            <span class="hub-card-tag">Molecular Biology</span>
+                            <span class="hub-card-tag">Central Dogma</span>
+                        </div>
+                        <div class="learn-card-meta">
+                            <span>~10 min</span>
+                            <span>2 papers</span>
+                            <span class="hub-badge badge-wasm">Interactive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. K-mer Frequency Explorer -->
+                <div class="learn-card">
+                    <div class="learn-card-preview">
+                        <span>K-mer spectrum</span>
+                    </div>
+                    <div class="learn-card-body">
+                        <div class="learn-card-header">
+                            <h3>K-mer Frequency Explorer</h3>
+                            <span class="learn-difficulty level-beginner">Beginner</span>
+                        </div>
+                        <p class="learn-card-description">Decompose a DNA sequence into k-mers and visualize their frequency distribution. Explore how k-mer size affects genome assembly and sequence comparison.</p>
+                        <div class="learn-card-crates">
+                            <span class="labs-crate-pill">cyanea-seq</span>
+                        </div>
+                        <div class="hub-card-tags">
+                            <span class="hub-card-tag">Sequence Analysis</span>
+                            <span class="hub-card-tag">Genomics</span>
+                        </div>
+                        <div class="learn-card-meta">
+                            <span>~10 min</span>
+                            <span>3 papers</span>
+                            <span class="hub-badge badge-wasm">Interactive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Pairwise Sequence Alignment -->
+                <div class="learn-card">
+                    <div class="learn-card-preview">
+                        <span>Dynamic programming matrix</span>
+                    </div>
+                    <div class="learn-card-body">
+                        <div class="learn-card-header">
+                            <h3>Pairwise Sequence Alignment</h3>
+                            <span class="learn-difficulty level-intermediate">Intermediate</span>
+                        </div>
+                        <p class="learn-card-description">Step through Needleman-Wunsch and Smith-Waterman algorithms cell by cell. Adjust gap penalties and substitution matrices to see how alignment scores change.</p>
+                        <div class="learn-card-crates">
+                            <span class="labs-crate-pill">cyanea-align</span>
+                        </div>
+                        <div class="hub-card-tags">
+                            <span class="hub-card-tag">Sequence Analysis</span>
+                            <span class="hub-card-tag">Algorithms</span>
+                        </div>
+                        <div class="learn-card-meta">
+                            <span>~20 min</span>
+                            <span>4 papers</span>
+                            <span class="hub-badge badge-wasm">Interactive</span>
+                            <span class="hub-badge badge-featured">Featured</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Phylogenetic Tree Builder -->
+                <div class="learn-card">
+                    <div class="learn-card-preview">
+                        <span>Neighbor-joining tree</span>
+                    </div>
+                    <div class="learn-card-body">
+                        <div class="learn-card-header">
+                            <h3>Phylogenetic Tree Builder</h3>
+                            <span class="learn-difficulty level-intermediate">Intermediate</span>
+                        </div>
+                        <p class="learn-card-description">Build phylogenetic trees from sequence data using distance-based methods. Compare neighbor-joining and UPGMA, and explore how distance metrics affect tree topology.</p>
+                        <div class="learn-card-crates">
+                            <span class="labs-crate-pill">cyanea-phylo</span>
+                        </div>
+                        <div class="hub-card-tags">
+                            <span class="hub-card-tag">Phylogenetics</span>
+                            <span class="hub-card-tag">Evolution</span>
+                        </div>
+                        <div class="learn-card-meta">
+                            <span>~20 min</span>
+                            <span>3 papers</span>
+                            <span class="hub-badge badge-wasm">Interactive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Protein Structure Viewer -->
+                <div class="learn-card">
+                    <div class="learn-card-preview">
+                        <span>3D protein fold</span>
+                    </div>
+                    <div class="learn-card-body">
+                        <div class="learn-card-header">
+                            <h3>Protein Structure Viewer</h3>
+                            <span class="learn-difficulty level-beginner">Beginner</span>
+                        </div>
+                        <p class="learn-card-description">Explore protein structures in 3D. Toggle between cartoon, ball-and-stick, and surface representations. Color by secondary structure, residue type, or B-factor.</p>
+                        <div class="learn-card-crates">
+                            <span class="labs-crate-pill">cyanea-struct</span>
+                        </div>
+                        <div class="hub-card-tags">
+                            <span class="hub-card-tag">Structural Biology</span>
+                            <span class="hub-card-tag">PDB</span>
+                        </div>
+                        <div class="learn-card-meta">
+                            <span>~10 min</span>
+                            <span>2 papers</span>
+                            <span class="hub-badge badge-wasm">Interactive</span>
+                            <span class="hub-badge badge-popular">Popular</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Small Molecule Explorer -->
+                <div class="learn-card">
+                    <div class="learn-card-preview">
+                        <span>Molecular fingerprints</span>
+                    </div>
+                    <div class="learn-card-body">
+                        <div class="learn-card-header">
+                            <h3>Small Molecule Explorer</h3>
+                            <span class="learn-difficulty level-intermediate">Intermediate</span>
+                        </div>
+                        <p class="learn-card-description">Draw or load small molecules, compute descriptors, and compare fingerprint similarity. Learn how cheminformatics methods underpin drug discovery pipelines.</p>
+                        <div class="learn-card-crates">
+                            <span class="labs-crate-pill">cyanea-chem</span>
+                        </div>
+                        <div class="hub-card-tags">
+                            <span class="hub-card-tag">Structural Biology</span>
+                            <span class="hub-card-tag">Cheminformatics</span>
+                        </div>
+                        <div class="learn-card-meta">
+                            <span>~15 min</span>
+                            <span>3 papers</span>
+                            <span class="hub-badge badge-wasm">Interactive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. p-value Playground -->
+                <div class="learn-card">
+                    <div class="learn-card-preview">
+                        <span>Distribution tails</span>
+                    </div>
+                    <div class="learn-card-body">
+                        <div class="learn-card-header">
+                            <h3>p-value Playground</h3>
+                            <span class="learn-difficulty level-beginner">Beginner</span>
+                        </div>
+                        <p class="learn-card-description">Simulate experiments and watch p-value distributions form. Explore the effects of sample size, effect size, and multiple testing on statistical significance.</p>
+                        <div class="learn-card-crates">
+                            <span class="labs-crate-pill">cyanea-stats</span>
+                        </div>
+                        <div class="hub-card-tags">
+                            <span class="hub-card-tag">Statistics</span>
+                            <span class="hub-card-tag">Hypothesis Testing</span>
+                        </div>
+                        <div class="learn-card-meta">
+                            <span>~10 min</span>
+                            <span>2 papers</span>
+                            <span class="hub-badge badge-wasm">Interactive</span>
+                            <span class="hub-badge badge-new">New</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Clustering & Dimensionality Reduction -->
+                <div class="learn-card">
+                    <div class="learn-card-preview">
+                        <span>UMAP / t-SNE projection</span>
+                    </div>
+                    <div class="learn-card-body">
+                        <div class="learn-card-header">
+                            <h3>Clustering & Dimensionality Reduction</h3>
+                            <span class="learn-difficulty level-intermediate">Intermediate</span>
+                        </div>
+                        <p class="learn-card-description">Apply PCA, t-SNE, and UMAP to biological datasets. Adjust hyperparameters and see how clusters form, split, and merge in real time.</p>
+                        <div class="learn-card-crates">
+                            <span class="labs-crate-pill">cyanea-ml</span>
+                        </div>
+                        <div class="hub-card-tags">
+                            <span class="hub-card-tag">Machine Learning</span>
+                            <span class="hub-card-tag">Visualization</span>
+                        </div>
+                        <div class="learn-card-meta">
+                            <span>~20 min</span>
+                            <span>4 papers</span>
+                            <span class="hub-badge badge-wasm">Interactive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. FASTA/FASTQ Format Inspector -->
+                <div class="learn-card">
+                    <div class="learn-card-preview">
+                        <span>Format anatomy</span>
+                    </div>
+                    <div class="learn-card-body">
+                        <div class="learn-card-header">
+                            <h3>FASTA/FASTQ Format Inspector</h3>
+                            <span class="learn-difficulty level-beginner">Beginner</span>
+                        </div>
+                        <p class="learn-card-description">Dissect bioinformatics file formats byte by byte. Learn how headers, sequences, and quality scores are structured, and validate files against the specification.</p>
+                        <div class="learn-card-crates">
+                            <span class="labs-crate-pill">cyanea-io</span>
+                        </div>
+                        <div class="hub-card-tags">
+                            <span class="hub-card-tag">Data Formats</span>
+                            <span class="hub-card-tag">Parsing</span>
+                        </div>
+                        <div class="learn-card-meta">
+                            <span>~5 min</span>
+                            <span>1 paper</span>
+                            <span class="hub-badge badge-wasm">Interactive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. GPU Parallel Patterns -->
+                <div class="learn-card">
+                    <div class="learn-card-preview">
+                        <span>Compute shader pipeline</span>
+                    </div>
+                    <div class="learn-card-body">
+                        <div class="learn-card-header">
+                            <h3>GPU Parallel Patterns</h3>
+                            <span class="learn-difficulty level-advanced">Advanced</span>
+                        </div>
+                        <p class="learn-card-description">Visualize GPU compute patterns for bioinformatics workloads. Compare CPU vs. GPU execution for k-mer counting, pairwise alignment, and matrix operations.</p>
+                        <div class="learn-card-crates">
+                            <span class="labs-crate-pill">cyanea-gpu</span>
+                        </div>
+                        <div class="hub-card-tags">
+                            <span class="hub-card-tag">HPC</span>
+                            <span class="hub-card-tag">WebGPU</span>
+                        </div>
+                        <div class="learn-card-meta">
+                            <span>~30 min</span>
+                            <span>5 papers</span>
+                            <span class="hub-badge badge-wasm">Interactive</span>
+                            <span class="hub-badge badge-new">New</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hub-cta">
+        <div class="hub-cta-card">
+            <h3>Build a simulation</h3>
+            <p>These simulations are powered by open-source Rust crates compiled to WebAssembly. Create your own interactive learning module and contribute it to the ecosystem.</p>
+            <a href="{{ config.extra.github_url }}" class="btn btn-primary">View on GitHub</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

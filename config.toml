@@ -56,5 +56,9 @@ name = "Labs"
 url = "/labs"
 
 [[extra.nav]]
+name = "Learn"
+url = "/learn"
+
+[[extra.nav]]
 name = "Docs"
 url = "/docs"
