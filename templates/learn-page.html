@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | Learn | {{ config.title }}{% endblock %}
+{% block description %}{{ page.description | default(value=config.description) }}{% endblock %}
+
+{% block og_title %}{{ page.title }}{% endblock %}
+{% block og_description %}{{ page.description | default(value=config.description) }}{% endblock %}
+
+{% block content %}
+<div class="learn-detail">
+    <div class="learn-detail-header">
+        <a href="/learn/" class="learn-detail-back">&larr; All simulations</a>
+        <h1>{{ page.title }}</h1>
+        <div class="learn-detail-meta">
+            {% if page.extra.difficulty %}
+            <span class="learn-difficulty level-{{ page.extra.difficulty_level }}">{{ page.extra.difficulty }}</span>
+            {% endif %}
+            {% if page.extra.domain %}
+            <span class="learn-detail-domain">{{ page.extra.domain }}</span>
+            {% endif %}
+            {% if page.extra.duration %}
+            <span class="learn-detail-duration">{{ page.extra.duration }}</span>
+            {% endif %}
+            {% if page.extra.papers %}
+            <span class="learn-detail-papers">{{ page.extra.papers }} paper{{ page.extra.papers | pluralize }}</span>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="learn-detail-preview">
+        <span>{{ page.extra.preview_label | default(value="Simulation preview") }}</span>
+    </div>
+
+    {% if page.description %}
+    <p class="learn-detail-description">{{ page.description }}</p>
+    {% endif %}
+
+    <div class="learn-detail-content">
+        {{ page.content | safe }}
+    </div>
+
+    {% if page.extra.crates %}
+    <div class="learn-detail-crates">
+        <h4>Powered by</h4>
+        <div class="learn-detail-crate-list">
+            {% for crate in page.extra.crates %}
+            <span class="labs-crate-pill">{{ crate }}</span>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if page.extra.tags %}
+    <div class="learn-detail-tags">
+        {% for tag in page.extra.tags %}
+        <span class="hub-card-tag">{{ tag }}</span>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="learn-detail-footer">
+        <a href="/learn/" class="btn btn-outline">&larr; Back to all simulations</a>
+    </div>
+</div>
+{% endblock %}

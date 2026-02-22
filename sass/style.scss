@@ -1919,6 +1919,126 @@ p { margin: 0; color: $gray-600; }
     align-items: center;
 }
 
+.learn-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+
+        .learn-card {
+            border-color: $gray-200;
+        }
+    }
+}
+
+// ─── Learn Detail Page ──────────────────────────
+.learn-detail {
+    max-width: $max-w-narrow;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.learn-detail-header {
+    margin-bottom: 2rem;
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.learn-detail-back {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: $gray-400;
+    margin-bottom: 1rem;
+    transition: color 0.15s;
+
+    &:hover {
+        color: $accent;
+        text-decoration: none;
+    }
+}
+
+.learn-detail-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: $gray-500;
+}
+
+.learn-detail-domain,
+.learn-detail-duration,
+.learn-detail-papers {
+    color: $gray-500;
+}
+
+.learn-detail-preview {
+    height: 320px;
+    background: $off-white;
+    border: 1px solid $gray-100;
+    border-radius: $radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $gray-400;
+    font-size: 0.9375rem;
+    margin-bottom: 2rem;
+}
+
+.learn-detail-description {
+    font-size: 1.1rem;
+    color: $gray-500;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.learn-detail-content {
+    margin-bottom: 2rem;
+    color: $gray-600;
+    line-height: 1.8;
+
+    p { margin-bottom: 1rem; }
+}
+
+.learn-detail-crates {
+    margin-bottom: 1.5rem;
+
+    h4 {
+        font-family: $font-body;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: $gray-400;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.learn-detail-crate-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.learn-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin-bottom: 2rem;
+}
+
+.learn-detail-footer {
+    padding-top: 2rem;
+    border-top: 1px solid $gray-100;
+}
+
 // ─── Hub Responsive ──────────────────────────────
 @media (max-width: 1024px) {
     .hub-layout {
@@ -1975,6 +2095,18 @@ p { margin: 0; color: $gray-600; }
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
+    }
+
+    .learn-detail {
+        padding: 2rem 1.5rem;
+    }
+
+    .learn-detail-header h1 {
+        font-size: 2rem;
+    }
+
+    .learn-detail-preview {
+        height: 220px;
     }
 }
 
